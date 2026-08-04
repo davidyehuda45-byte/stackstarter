@@ -1,5 +1,9 @@
 # StackStarter
 
+[🌐 Lihat Live Demo Aplikasi](https://stackstarter-five.vercel.app/)
+
+# StackStarter
+
 StackStarter adalah aplikasi web direktori berbasis React yang menyediakan panduan inisialisasi perintah Command Line Interface (CLI) untuk berbagai kerangka kerja dan pustaka pemrograman. Aplikasi ini dirancang untuk mempermudah pengembang dalam menginisialisasi proyek dengan penyesuaian sintaksis perintah secara langsung berdasarkan jenis terminal yang digunakan (Windows CMD, PowerShell, dan Bash/macOS/Linux).
 
 ## Fitur Utama
