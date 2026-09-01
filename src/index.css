@@ -1,1 +1,122 @@
 @import "tailwindcss";
+
+:root {
+  --bg: #fafafa;
+  --bg-soft: #f4f4f5;
+  --card: #ffffff;
+  --card-hover: #fafafa;
+  --input: #f4f4f5;
+  --muted-bg: #f4f4f5;
+  --border: #e4e4e7;
+  --border-strong: #d4d4d8;
+  --text: #18181b;
+  --muted: #52525b;
+  --faint: #a1a1aa;
+  --code-bg: #f4f4f5;
+  --code-text: #059669;
+  --on-accent: #ffffff;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  --accent: #10b981;
+  --accent-hover: #059669;
+  --accent-soft: color-mix(in srgb, var(--accent) 16%, transparent);
+  --accent-border: color-mix(in srgb, var(--accent) 40%, transparent);
+
+  --hs-fg: var(--text);
+  --hs-bg: color-mix(in srgb, var(--accent) 22%, var(--card));
+}
+
+html[data-theme="dark"] {
+  --bg: #09090b;
+  --bg-soft: #18181b;
+  --card: #1a1a1f;
+  --card-hover: #27272a;
+  --input: #151518;
+  --muted-bg: #1c1c21;
+  --border: #27272a;
+  --border-strong: #3f3f46;
+  --text: #f4f4f5;
+  --muted: #a1a1aa;
+  --faint: #71717a;
+  --code-bg: #09090b;
+  --code-text: #34d399;
+  --on-accent: #09090b;
+  --shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+}
+
+html[data-accent="emerald"] {
+  --accent: #10b981;
+  --accent-hover: #059669;
+}
+
+html[data-accent="cyan"] {
+  --accent: #06b6d4;
+  --accent-hover: #0891b2;
+}
+
+html[data-accent="violet"] {
+  --accent: #8b5cf6;
+  --accent-hover: #7c3aed;
+}
+
+html[data-accent="amber"] {
+  --accent: #f59e0b;
+  --accent-hover: #d97706;
+}
+
+html[data-accent="rose"] {
+  --accent: #f43f5e;
+  --accent-hover: #e11d48;
+}
+
+html[data-accent="blue"] {
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+@utility bg-app { background-color: var(--bg); }
+@utility bg-app-translucent { background-color: color-mix(in srgb, var(--bg) 88%, transparent); }
+@utility bg-app-soft { background-color: var(--bg-soft); }
+@utility bg-card { background-color: var(--card); }
+@utility bg-card-hover { background-color: var(--card-hover); }
+@utility bg-input { background-color: var(--input); }
+@utility bg-muted { background-color: var(--muted-bg); }
+@utility bg-code { background-color: var(--code-bg); }
+@utility bg-accent { background-color: var(--accent); }
+@utility bg-accent-hover { background-color: var(--accent-hover); }
+@utility bg-accent-soft { background-color: var(--accent-soft); }
+
+@utility text-main { color: var(--text); }
+@utility text-muted { color: var(--muted); }
+@utility text-faint { color: var(--faint); }
+@utility text-code { color: var(--code-text); }
+@utility text-on-accent { color: var(--on-accent); }
+@utility text-accent { color: var(--accent); }
+
+@utility border-line { border-color: var(--border); }
+@utility border-line-strong { border-color: var(--border-strong); }
+@utility border-accent { border-color: var(--accent-border); }
+
+@utility ring-accent { --tw-ring-color: var(--accent-border); }
+@utility placeholder-text { color: var(--faint); }
+
+@utility shadow-soft { box-shadow: var(--shadow); }
+
+@utility scrollbar-none {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
